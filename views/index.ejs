@@ -5,7 +5,6 @@
   </head>
   <body>
     <!-- Navbar (sit on top) -->
-    <nav></nav>
     <%- include('./partials/nav-bar') %> 
         </div>
       </div>
@@ -54,10 +53,10 @@
       <!-- Menu Section -->
       <div class="ps-row ps-padding-64" id="menu">
         <div class="ps-col l6 ps-padding-large">
-          <h1 class="ps-center">Nuestro Menu</h1>
+          <h1 class="ps-center">Nuestro Menú</h1>
           <br />
-          <% products.forEach(({name, description, price}) => { %>
-            <h4><%= name %></h4>
+          <% products.forEach(({name, description, price, id}) => { %>
+            <h4><a href="/detail/<%= id %>"><%= name %></a></h4>
             <p class="ps-text-grey">
               <%= description %>  U$S <b><%= price %></b>
             </p>

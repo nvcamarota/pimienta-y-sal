@@ -6,6 +6,6 @@ const { index, detail } = require('../controllers/indexController')
 
 router
     .get('/', index)
-    .get('/detail', detail)
+    .get('/detail/:id', detail)
 
 module.exports = router;
